@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CancerQuest</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/get.css">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
+   
+  
+</head>
+<body>
+ 
+    <header>
+            <nav class="bottom-bar">
+                <div class="logo">
+                    <img src="/static/css/bg.jpg" alt="Logo" class="logoimg">
+                </div>
+                <ul class="bottom-bar__list">
+                    <div class="bottom-bar__active-indicator"></div>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <a class="navLink" href="/getstarted"> <i class="fa-solid fa-house"></i>
+                      </span>Home</a></li> 
+                    <!-- <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <a class="navLink" href="/profile"><i class="fa fa-user"></i>
+                      </span>Profile</a></li> -->
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <a class="navLink" href="/doctor"><i class="fa fa-user-md"></i>
+                      </span>Doctor</a></li>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <a class="navLink" href="/choice"><i class="fa fa-search"></i>
+                      </span>Prediction</a></li>
+                    <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                      <a class="navLink" href="/logout"><i class="fa fa-sign-out"></i>
+                      </span>Sign Out</a></li>
+                  </ul>
+           
+        </nav>
+        
+
+     
+    
+    <br><br><h1>
+<div class="content"> <center>WELCOME {{session.NAME}}!!</center></div>
+</h1>
+<div class="box">
+  <center>
+  <h2 class="head">YOUR INFORMATION</h2>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th>TYPE OF CANCER</th>
+        <th>PREVIOUS PREDICTION</th>
+    
+      </tr>
+    </thead>
+      <tbody>
+        <tr>
+          <td data-column="First Name">Breast Cancer</td>
+          <td data-column="Last Name">{{ patient_data[0] }}</td>
+        </tr>
+        <tr>
+          <td data-column="First Name">Cervical Cancer</td>
+          <td data-column="Last Name">{{ patient_data[1] }}</td>
+        </tr>
+        <tr>
+          <td data-column="First Name">Lung Cancer</td>
+          <td data-column="Last Name">{{ patient_data[2] }}</td>
+        </tr>
+        <tr>
+          <td data-column="First Name">Liver Cancer</td>
+          <td data-column="Last Name">{{ patient_data[3] }}</td>
+        </tr>
+    </tbody>
+
+  </table>
+</div>
+<br><br>
+<div class="content1">
+  <center><h2>ABOUT US</h2></center>
+  Welcome to our cancer prediction website, 
+  where we are dedicated to helping individuals 
+  assess their risk of developing liver, lung, 
+  cervical, and breast cancer. With our advanced 
+  algorithms, we analyze your data to provide you with 
+  a comprehensive risk assessment of each cancer type, 
+  giving you the knowledge to take preventative measures or 
+  seek early detection if needed. Not only do we provide cancer
+   risk predictions, but we also suggest the best doctors in your 
+   area  based on your zip code for each cancer type to help you 
+   receive the best possible care. In addition to these features,
+    we also have our friendly chatbot named HopeBot, who is here to guide you through the website
+     and provide helpful information along the way. We believe in empowering individuals with knowledge and hope to help you take control of your health. Our goal is to provide you with the resources you need to make informed decisions about your health and wellbeing. We believe that prevention and early detection are crucial in the fight against cancer, and we hope that our website can be a valuable resource in that battle.
+</div>
+</center>
+</header>
+
+
+</body>
+</html>

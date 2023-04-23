@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervical Cancer Prediction Form</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/cervicalstyle.css">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
+   
+  
+</head>
+<body>
+ 
+    <header>
+      <nav class="bottom-bar">
+        <div class="logo">
+            <img src="/static/css/bg.jpg" alt="Logo" class="logoimg">
+        </div>
+        <ul class="bottom-bar__list">
+            <div class="bottom-bar__active-indicator"></div>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/getstarted"> <i class="fa-solid fa-house"></i>
+              </span>Home</a></li> 
+            <!-- <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/profile"><i class="fa fa-user"></i>
+              </span>Profile</a></li> -->
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/doctor"><i class="fa fa-user-md"></i>
+              </span>Doctor</a></li>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/choice"><i class="fa fa-search"></i>
+              </span>Prediction</a></li>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/logout"><i class="fa fa-sign-out"></i>
+              </span>Sign Out</a></li>
+          </ul>
+   
+</nav>
+
+
+
+        <div class="bg-img">
+            <div class="box">
+             <h3>If you need info regarding any attributes click here</h3><br>
+              <a class="button" href="#popup1">Let me Pop up</a>
+            </div>
+      
+           <div id="popup1" class="overlay">
+              <div class="popup">
+                <h2>Hello</h2>
+                    <a class="close" href="#">&times;</a>
+                      <div class="content">
+                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                      </div>
+                </div>
+           </div>
+      
+                <form action='/cervpred'method="POST" class="container">
+                    <h1>Cervical Cancer Prediction Form</h1><br>
+                    <Table Border="0">
+                        <TR>
+                        <TD>Hormonal Contraceptives</TD>
+                        <TD><Input type="Text" Name="Hormonal Contraceptives" Placeholder="Values range : 0 -1 " Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Hormonal Contraceptives (years)</TD>
+                        <TD><Input type="Text" Name="Hormonal Contraceptives (years)" Placeholder="Values range : 0 -30 " Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Dx</TD>
+                        <TD><Input type="Text" Name="Dx" Placeholder="Values range : 0 - 1" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Dx:Cancer</TD>
+                        <TD><Input type="Text" Name="Dx:Cancer" Placeholder="Values range : 0 - 1" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>IUD</TD>
+                        <TD><Input type="Text" Name="IUD" Placeholder="Values range : 0 - 1" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Dx:HPV</TD>
+                        <TD><Input type="Text" Name="Dx:HPV" Placeholder="Values range : 0 - 1" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>IUD (years)</TD>
+                        <TD><Input type="Text" Name="IUD (years)" Placeholder="Values range : 0 - 19" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>Smokes (packs/year)</TD>
+                        <TD><Input type="Text" Name="Smokes (packs/year)" Placeholder="Values range : 0 - 37" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>STDs:vulvo-perineal condylomatosis</TD>
+                        <TD><Input type="Text" Name="STDs:vulvo-perineal condylomatosis" Placeholder="Values range : 0 - 1" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                        <TD>STDs:condylomatosis</TD>
+                        <TD><Input type="Text" Name="STDs:condylomatosis" Placeholder="Values range : 0 - 1" Required="Required"></TD>
+                        </TR>
+                        <TR>
+                      </Table>
+      
+                    <Button type="Submit" Class="btn">PREDICT</Button> 
+                    {{ prediction_text }}     
+                
+                  </form>
+                  
+      </div>
+      
+      </header>
+      </body>
+      </html>

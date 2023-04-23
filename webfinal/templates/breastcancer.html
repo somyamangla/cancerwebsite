@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction Form</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/breast.css">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
+   
+  
+</head>
+<body>
+ 
+    <header>
+      <nav class="bottom-bar">
+        <div class="logo">
+            <img src="/static/css/bg.jpg" alt="Logo" class="logoimg">
+        </div>
+        <ul class="bottom-bar__list">
+            <div class="bottom-bar__active-indicator"></div>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/getstarted"> <i class="fa-solid fa-house"></i>
+              </span>Home</a></li> 
+            <!-- <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/profile"><i class="fa fa-user"></i>
+              </span>Profile</a></li> -->
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/doctor"><i class="fa fa-user-md"></i>
+              </span>Doctor</a></li>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/choice"><i class="fa fa-search"></i>
+              </span>Prediction</a></li>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/logout"><i class="fa fa-sign-out"></i>
+              </span>Sign Out</a></li>
+          </ul>
+   
+</nav>
+
+
+        <div class="bg-img">
+            <div class="box">
+             <h3>If you need info regarding any attributes click here</h3><br>
+              <a class="button" href="#popup1">Let me Pop up</a>
+            </div>
+      
+           <div id="popup1" class="overlay">
+              <div class="popup">
+                <h2>Hello</h2>
+                    <a class="close" href="#">&times;</a>
+                      <div class="content">
+                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                      </div>
+                </div>
+           </div>
+      
+                <form action="/pred" method="POST" class="container">
+                    <h1>Breast Cancer Prediction Form</h1><br>
+                    
+              <Table Border="0">
+                <TR>
+                <TD>First Value</TD>
+                <TD><Input type="Text" Name="First Value" Placeholder="Values range : 6.98 - 28.11" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Second Value</TD>
+                <TD><Input type="Text" Name="Second Value" Placeholder="Values range : 43.79 - 188.5" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Third Value</TD>
+                <TD><Input type="Text" Name="Third Value" Placeholder="Values range : 143.5 - 2501" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Fourth Value</TD>
+                <TD><Input type="Text" Name="Fourth Value" Placeholder="Values range : 0 - 0.42" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Fifth Value</TD>
+                <TD><Input type="Text" Name="Fifth Value" Placeholder="Values range : 0 - 0.20" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Sixth Value</TD>
+                <TD><Input type="Text" Name="Sixth Value" Placeholder="Values range : 7.93 - 36.04" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Seventh Value</TD>
+                <TD><Input type="Text" Name="Seventh Value" Placeholder="Values range : 50.41 - 251.2" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Eighth Value</TD>
+                <TD><Input type="Text" Name="Eighth Value" Placeholder="Values range : 185.2 - 4254" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Ninth Value</TD>
+                <TD><Input type="Text" Name="Ninth Value" Placeholder="Values range : 0 - 1.25" Required="Required"></TD>
+                </TR>
+                <TR>
+                <TD>Tenth Value</TD>
+                <TD><Input type="Text" Name="Tenth Value" Placeholder="Values range : 0 - 0.29" Required="Required"></TD>
+                </TR>
+              </Table>
+              
+              <Button type="submit" Class="btn">PREDICT</Button>     
+              {{ prediction_text }} 
+            </form>
+</div>
+
+</header>
+</body>
+</html>

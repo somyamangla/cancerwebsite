@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liver Cancer Prediction Form</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/liverstyle.css">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
+   
+  
+</head>
+<body>
+ 
+    <header>
+      <nav class="bottom-bar">
+        <div class="logo">
+            <img src="/static/css/bg.jpg" alt="Logo" class="logoimg">
+        </div>
+        <ul class="bottom-bar__list">
+            <div class="bottom-bar__active-indicator"></div>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/getstarted"> <i class="fa-solid fa-house"></i>
+              </span>Home</a></li> 
+            <!-- <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/profile"><i class="fa fa-user"></i>
+              </span>Profile</a></li> -->
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/doctor"><i class="fa fa-user-md"></i>
+              </span>Doctor</a></li>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/choice"><i class="fa fa-search"></i>
+              </span>Prediction</a></li>
+            <li class="bottom-bar__link"><span class="material-symbols-outlined">
+              <a class="navLink" href="/logout"><i class="fa fa-sign-out"></i>
+              </span>Sign Out</a></li>
+          </ul>
+   
+</nav>
+
+
+
+        <div class="bg-img">
+            <div class="box">
+             <h3>If you need info regarding any attributes click here</h3><br>
+              <a class="button" href="#popup1">Let me Pop up</a>
+            </div>
+      
+           <div id="popup1" class="overlay">
+              <div class="popup">
+                <h2>Hello</h2>
+                    <a class="close" href="#">&times;</a>
+                      <div class="content">
+                        Thank to pop me out of that button, but now i'm done so you can close this window.
+                      </div>
+                </div>
+           </div>
+      
+                <form action='/livpred'method="POST" class="container">
+                    <h1>Liver Cancer Prediction Form</h1><br>
+                     <Table>
+                      <TR>
+                      <TD>Age</TD>
+                      <TD><Input type="Text" Name="Age" Placeholder="Values range : 4 - 90" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Gender</TD>
+                      <TD><Input type="Text" Name="Gender" Placeholder="Values range : 0 - 0" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Total Bilirubin</TD>
+                      <TD><Input type="Text" Name="Total Bilirubin" Placeholder="Values range : 0.4 - 75" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Direct Bilirubin</TD>
+                      <TD><Input type="Text" Name="Direct Bilirubin" Placeholder="Values range : 0.1 - 19.7" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Alkaline Phosphotase</TD>
+                      <TD><Input type="Text" Name="Alkaline Phosphotase" Placeholder="Values range : 63 - 2110" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Alamine Aminotransferase</TD>
+                      <TD><Input type="Text" Name="Alamine Aminotransferase" Placeholder="Values range : 10 - 2000" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Aspartate Aminotransferase</TD>
+                      <TD><Input type="Text" Name="Aspartate Aminotransferase" Placeholder="Values range : 10 - 4929" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Total Protiens</TD>
+                      <TD><Input type="Text" Name="Total Protiens" Placeholder="Values range : 2.7 - 9.6" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Albumin</TD>
+                      <TD><Input type="Text" Name="Albumin" Placeholder="Values range : 0.9 - 5.5" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                      <TD>Albumin & Globulin Ratio</TD>
+                      <TD><Input type="Text" Name="Albumin and Globulin Ratio" Placeholder="Values range : 0.3 - 2.8" Required="Required"></TD>
+                      </TR>
+                      <TR>
+                    </Table>
+      
+                    <Button type="Submit" Class="btn">PREDICT</Button>     
+                    {{ prediction_text |safe}}
+                  </form>
+                   
+      </div>
+      
+      </header>
+      </body>
+      </html>

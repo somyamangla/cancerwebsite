@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CancerQuest</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/doc.css">
+    <script src="https://kit.fontawesome.com/c8b2778b34.js" crossorigin="anonymous"></script>
+   
+  
+</head>
+<body>
+        <nav class="bottom-bar">
+            <div class="logo">
+                <img src="/static/css/bg.jpg" alt="Logo" class="logoimg">
+            </div>
+            <ul class="bottom-bar__list">
+                <div class="bottom-bar__active-indicator"></div>
+                <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                  <a class="navLink" href="/getstarted"> <i class="fa-solid fa-house"></i>
+                  </span>Home</a></li> 
+                <!-- <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                  <a class="navLink" href="/profile"><i class="fa fa-user"></i>
+                  </span>Profile</a></li> -->
+                <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                  <a class="navLink" href="/doctor"><i class="fa fa-user-md"></i>
+                  </span>Doctor</a></li>
+                <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                  <a class="navLink" href="/choice"><i class="fa fa-search"></i>
+                  </span>Prediction</a></li>
+                <li class="bottom-bar__link"><span class="material-symbols-outlined">
+                  <a class="navLink" href="/logout"><i class="fa fa-sign-out"></i>
+                  </span>Sign Out</a></li>
+              </ul>
+       
+    </nav>
+        
+    <div class="table">
+    <div class="content">
+		<form method="POST">
+			<label for="place">Select a place:</label>
+			<select name="place" id="place">
+				<option value="All" selected>All</option>
+				{% for place in places %}
+				<option value="{{ place }}">{{ place }}</option>
+				{% endfor %}
+			</select>
+			<button type="submit">Filter</button>
+		</form>
+		<table border="1" cellspacing="5">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Hospital</th>
+					<th>Address</th>
+					<th>Email</th>
+					<th>Number</th>
+					<th>Pincode</th>
+					<th>Region</th>
+					<th>Place</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for doctor in doctors %}
+				<tr>
+					<td>{{ doctor[0] }}</td>
+					<td>{{ doctor[1] }}</td>
+					<td>{{ doctor[2] }}</td>
+					<td>{{ doctor[3] }}</td>
+					<td>{{ doctor[4] }}</td>
+					<td>{{ doctor[5] }}</td>
+					<td>{{ doctor[6] }}</td>
+					<td>{{ doctor[7] }}</td>
+				</tr>
+				{% endfor %}
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>

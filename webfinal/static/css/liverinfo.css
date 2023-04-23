@@ -1,0 +1,283 @@
+/*-------------------------------------------------------------------------- NAVIGATION BAR ---------------------------------------------------------------------------*/
+.logoimg{
+   height: 50px;
+   width: 290px;
+   padding-top: 2%;
+   padding-bottom: 2%;
+
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
+:root {
+   --easing: cubic-bezier(0.645, 0.045, 0.355, 1);
+ }
+ .material-symbols-outlined {
+   font-size: 24px;
+   font-variation-settings: "FILL" 0, "wght" 200, "GRAD" 0, "opsz" 40;
+   transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+ }
+ 
+ .bottom-bar {
+   position: fixed;
+   z-index: 10000;
+   top: 0;
+   width: 100%;
+   height: 56px;
+   background: black;
+   filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.1));
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ 
+ .bottom-bar__list {
+   flex-basis: 32rem;
+   display: flex;
+   position: relative;
+   cursor: pointer;
+ }
+ 
+     
+ .bottom-bar__link {
+   color: #ffffff;
+   flex: 1;
+   font-size: 0.675rem;
+   font-weight: 300;
+   letter-spacing: 0.025rem;
+   font-family: "Roboto", sans-serif;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 0.25rem;
+   z-index: 2;
+ }
+
+
+ nav ul li a{
+   color: white;
+   text-decoration: none;
+ }
+   .bottom-bar__link:hover, .bottom-bar__link:focus, .bottom-bar__link:active {
+     animation: hover-pulse 1s linear infinite;
+     cursor: pointer;
+   }
+   
+   @keyframes hover-pulse {
+     25% {
+       transform: scale(1.1);
+     }
+     75% {
+       transform: scale(0.9);
+     }
+   }
+/*-------------------------------------------------------------------------- CONTENT PAGE -----------------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body
+{
+   margin: 0;
+   padding: 0;
+   font-family: 'Roboto', 'sans-serif';
+   position: relative;
+}
+
+.title
+{
+   width: 100%;
+   height: 500px;
+   opacity: 1;
+   margin-top: 57px;
+   background-color: rgb(30, 173, 255);
+   background-image: url('https://images.pexels.com/photos/8016913/pexels-photo-8016913.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+   background-size: cover;
+   background-position: center;
+}
+
+.container
+{
+   width: 100%;
+}
+
+.container h1
+{
+   font-size: 50px
+}
+
+.about
+{
+   padding: 4% 0;
+   width: 100%;
+   height: auto;
+   background-color: rgba(248,248,248,255);
+}
+
+.about .left
+{
+   padding: 2% 0;
+   float: left;
+   width: 50%;
+   display: inline-block;
+}
+
+.about .right
+{
+   width: 50%;
+   display: inline-block;
+}
+
+.about .right img
+{
+   width: 95%;
+   margin-top: 30px;
+
+}
+
+.about .left h1
+{
+   text-align: center;
+   color: #36498b;
+   margin: 0 0 10px 0;
+}
+
+.about .left hr
+{
+   width: 20%;
+   border-top: 2px solid #000;
+   border-bottom: none;
+   margin-left: 300px;
+}
+
+.about .left p
+{
+   font-size: 1.1rem;
+   margin: 40px auto;
+   width: 80%
+}
+
+.about .left ul
+{
+    font-size: 1.1rem;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.mission
+{
+   width: 100%;
+   height: auto;
+   padding: 1% 0; 
+   background-color: #fff;
+}
+
+.mission .right
+{
+   width: 50%;
+   display: inline-block;
+}
+
+.mission .left
+{
+   float: left;
+   width: 50%;
+   display:inline-block;
+}
+
+.mission .left img
+{
+   width: 95%;
+   
+}
+
+.mission .right h1
+{
+   text-align: center;
+   color: #36498b;
+   margin: 0 0 20px 0;
+}
+
+.mission .right hr
+{
+   width: 18%;
+   border-top: 2px solid #000;
+   border-bottom: none;
+   margin-left: 310px;
+}
+
+.mission .right p
+{
+   font-size: 1.1rem;
+   margin:40px auto;
+   width: 80%
+}
+
+.clear
+{
+    clear: both;			
+}
+
+.mission .right ul
+{
+    font-size: 1.1rem;
+    margin: 40px auto;
+    width: 80%;
+}
+
+/*-------------------------------------------------------------------------- FOOTER -----------------------------------------------------------------------------------*/
+
+footer
+{
+   width: 100%;
+   height: 60px;
+   background-color: black;
+}
+
+footer p
+{
+   text-align: center;
+   padding: 0 2% ;
+   color: #fff;
+   font-size: 1.1rem;
+}
+
+/* media */
+@media(max-width: 1200px)
+{
+   .mission .right p{
+      font-size: .8rem;
+      margin: 20px auto;
+   }
+   .about .left p{
+      font-size: .8rem;
+      margin: 20px auto;
+   }
+}
+
+@media(max-width: 992px)
+{
+   .about .left{
+   width: 100%; 
+}
+   .about .right{
+   width: 100%; 
+}
+      .mission .left{
+   width: 100%; 
+}
+   .mission .right{
+   width: 100%; 
+}
+   .team .card{ 
+   width: 40%;
+}   
+}
+
+@media(max-width: 768px)
+{
+      .team .card{ 
+   width: 100%;
+} 
+   nav{
+      height: 80px;
+   }
+}
